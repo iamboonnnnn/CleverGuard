@@ -83,6 +83,7 @@ CleverGuard automatically activates enhanced protection on:
 - Outlook (outlook.live.com, outlook.office.com)
 - Yahoo Mail (mail.yahoo.com)
 - AOL Mail (mail.aol.com)
+- iCloud Mail (mail.icloud.com, www.icloud.com)
 - ProtonMail (protonmail.com)
 - Tutanota (tutanota.com)
 

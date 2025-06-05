@@ -5,6 +5,10 @@ All notable changes to the CleverGuard Chrome extension will be documented in th
 ## [1.1.0] - 2025-01-06
 
 ### 🆕 Added
+- **iCloud Mail Support**: Full compatibility with Apple iCloud Mail (mail.icloud.com, www.icloud.com)
+  - Dynamic content monitoring for iCloud Mail's interface
+  - Special handling for iCloud Mail's dynamic loading
+  - Enhanced link detection for Apple's email platform
 - **Enhanced Phishing Domain Database**: Added 5 new known phishing domains to the blacklist
   - `secure-banking.tk`
   - `paypal-verify.ml` 

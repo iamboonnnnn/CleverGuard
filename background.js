@@ -209,4 +209,4 @@ chrome.runtime.onInstalled.addListener((details) => {
   }
 });
 
-console.log('CleverGuard background service worker loaded'); 
+console.log('CleverGuard background service worker loaded - v1.1 with iCloud Mail support'); 

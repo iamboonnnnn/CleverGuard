@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "CleverGuard - Phishing Protection",
-  "version": "1.1",
+  "version": "1.1.1",
   "description": "Enhanced email security with phishing link detection and warning system",
   "permissions": [
     "storage",
@@ -35,7 +35,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["warning.html", "warning.css"],
+      "resources": ["warning.html", "warning.css", "test-page.html"],
       "matches": ["<all_urls>"]
     }
   ]

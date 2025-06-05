@@ -187,21 +187,21 @@ class CleverGuardPopup {
     const testBtn = document.getElementById('testBtn');
     const originalText = testBtn.textContent;
     
-    testBtn.textContent = 'Testing...';
+    testBtn.textContent = 'Opening Test Page...';
     testBtn.disabled = true;
 
     try {
-      // Create a test tab with a known phishing test URL
-      const testUrl = 'https://phishing-example.com/test';
+      // Get the extension URL for the test page
+      const testPageUrl = chrome.runtime.getURL('test-page.html');
       
-      // Open test tab
+      // Open test page in a new tab
       await chrome.tabs.create({
-        url: testUrl,
-        active: false
+        url: testPageUrl,
+        active: true
       });
 
       // Show success message
-      this.showTestResult(true, 'Test completed! Check the opened tab for the warning.');
+      this.showTestResult(true, 'Test page opened! Try clicking the test links to see warnings.');
       
       // Update stats
       this.stats.linksChecked += 1;
@@ -210,12 +210,12 @@ class CleverGuardPopup {
 
     } catch (error) {
       console.error('Test failed:', error);
-      this.showTestResult(false, 'Test failed. Please check your connection and try again.');
+      this.showTestResult(false, 'Test failed. Please check if the extension is properly installed.');
     } finally {
       setTimeout(() => {
         testBtn.textContent = originalText;
         testBtn.disabled = false;
-      }, 2000);
+      }, 1500);
     }
   }
 

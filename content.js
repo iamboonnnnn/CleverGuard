@@ -35,7 +35,9 @@ class CleverGuardProtection {
       'mail.yahoo.com',
       'mail.aol.com',
       'protonmail.com',
-      'tutanota.com'
+      'tutanota.com',
+      'mail.icloud.com',
+      'www.icloud.com'
     ];
     
     return emailPlatforms.some(platform => hostname.includes(platform));
@@ -44,7 +46,16 @@ class CleverGuardProtection {
   // Check if we should monitor links on this page
   shouldMonitorLinks() {
     // Monitor all HTTPS pages for comprehensive protection
-    return window.location.protocol === 'https:' || window.location.protocol === 'http:';
+    const isSecure = window.location.protocol === 'https:' || window.location.protocol === 'http:';
+    
+    // Special handling for iCloud Mail which uses dynamic content
+    const isICloudMail = window.location.hostname.includes('icloud.com');
+    if (isICloudMail) {
+      // Wait for iCloud Mail to fully load before activating protection
+      this.setupICloudMailProtection();
+    }
+    
+    return isSecure;
   }
 
   // Get settings from background script
@@ -54,6 +65,43 @@ class CleverGuardProtection {
         resolve(response || { enabled: true, allowUserProceed: true });
       });
     });
+  }
+
+  // Setup iCloud Mail specific protection
+  setupICloudMailProtection() {
+    // iCloud Mail loads dynamically, so we need to wait and observe changes
+    console.log('Setting up iCloud Mail protection...');
+    
+    // Wait for iCloud Mail interface to load
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.addedNodes) {
+          mutation.addedNodes.forEach((node) => {
+            if (node.nodeType === Node.ELEMENT_NODE) {
+              // Look for email content areas and links
+              const links = node.querySelectorAll ? node.querySelectorAll('a[href]') : [];
+              links.forEach(link => {
+                if (!link.dataset.cleverguardProtected) {
+                  link.dataset.cleverguardProtected = 'true';
+                  link.addEventListener('click', this.handleLinkClick.bind(this), true);
+                }
+              });
+            }
+          });
+        }
+      });
+    });
+
+    // Start observing the document for changes
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+    // Also setup standard link interception
+    setTimeout(() => {
+      this.setupLinkInterception();
+    }, 2000);
   }
 
   // Setup link click interception
@@ -469,4 +517,4 @@ if (document.readyState === 'loading') {
   new CleverGuardProtection();
 }
 
-console.log('CleverGuard content script loaded - v1.1 with enhanced protection'); 
+console.log('CleverGuard content script loaded - v1.1 with enhanced protection including iCloud Mail'); 
