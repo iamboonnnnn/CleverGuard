@@ -2,6 +2,8 @@
 
 🛡️ **CleverGuard** is a powerful Chrome extension that protects users from phishing attacks by detecting suspicious links and displaying warning overlays before users can access potentially dangerous websites.
 
+> **🚧 Demo Project:** This is a **hackathon demonstration** showcasing phishing protection concepts. Current detection capabilities are limited to a basic dataset. Future versions will include expanded databases and AI-powered detection.
+
 ## 🚀 Features
 
 ### Core Protection
@@ -60,6 +62,13 @@
 1. Go to Gmail, iCloud Mail, Outlook, or any supported email client
 2. Try clicking suspicious-looking links in your emails
 3. The extension should intercept and warn you before accessing dangerous sites
+
+> **📢 Important Note:** CleverGuard is currently a **demonstration project for hackathon purposes** and represents a fundamental extension with a **limited dataset**. Many real-world phishing links may not yet be detected. We are actively working to:
+> - **Expand our threat database** with comprehensive phishing domain lists
+> - **Integrate AI-powered detection models** for advanced pattern recognition
+> - **Enhance real-time protection** through machine learning algorithms
+> 
+> This extension serves as a **proof of concept** showcasing phishing protection capabilities. For production use, we recommend using it alongside other security tools until our dataset and AI models are fully developed.
 
 ### 🚀 Future Release
 *CleverGuard will be available on the Chrome Web Store soon for easier installation*

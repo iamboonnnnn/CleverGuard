@@ -15,6 +15,11 @@ All notable changes to the CleverGuard Chrome extension will be documented in th
 - **Test Protection Button**: Now properly opens the hosted test page instead of attempting to load local file
 - **Better User Experience**: Improved button feedback and error messages
 
+### 📢 Documentation
+- **Transparency Update**: Added clear disclaimer about demonstration/hackathon status
+- **Future Roadmap**: Explained plans for expanded dataset and AI integration
+- **User Expectations**: Set appropriate expectations for current detection capabilities
+
 ### 🆕 Added (Previous)
 - **Enhanced Phishing Domain Database**: Added 5 new known phishing domains to the blacklist
   - `secure-banking.tk`
@@ -72,8 +77,10 @@ All notable changes to the CleverGuard Chrome extension will be documented in th
 ## 🔮 Coming Soon
 
 ### [1.2.0] - Planned Features
+- **Expanded Threat Database**: Comprehensive phishing domain database with 10,000+ entries
 - **Real Safe Browsing API**: Integration with Google Safe Browsing API
-- **Machine Learning**: AI-powered phishing detection
+- **AI-Powered Detection**: Machine learning models for advanced phishing pattern recognition
+- **Real-time Threat Intelligence**: Dynamic updates from security feeds
 - **Cloud Sync**: Settings synchronization across devices
 - **Advanced Reporting**: Detailed threat analysis reports
 - **Custom Rules**: User-defined detection patterns
