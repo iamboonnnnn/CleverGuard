@@ -2,13 +2,20 @@
 
 All notable changes to the CleverGuard Chrome extension will be documented in this file.
 
-## [1.1.0] - 2025-01-06
+## [1.1.1] - 2025-01-06
 
 ### 🆕 Added
+- **Hosted Test Page**: Test Protection button now opens hosted test page at [https://cleverguardtestpage.pages.dev/](https://cleverguardtestpage.pages.dev/)
 - **iCloud Mail Support**: Full compatibility with Apple iCloud Mail (mail.icloud.com, www.icloud.com)
   - Dynamic content monitoring for iCloud Mail's interface
   - Special handling for iCloud Mail's dynamic loading
   - Enhanced link detection for Apple's email platform
+
+### 🔧 Fixed
+- **Test Protection Button**: Now properly opens the hosted test page instead of attempting to load local file
+- **Better User Experience**: Improved button feedback and error messages
+
+### 🆕 Added (Previous)
 - **Enhanced Phishing Domain Database**: Added 5 new known phishing domains to the blacklist
   - `secure-banking.tk`
   - `paypal-verify.ml` 

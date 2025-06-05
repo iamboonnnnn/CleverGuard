@@ -191,8 +191,8 @@ class CleverGuardPopup {
     testBtn.disabled = true;
 
     try {
-      // Get the extension URL for the test page
-      const testPageUrl = chrome.runtime.getURL('test-page.html');
+      // Open the hosted test page
+      const testPageUrl = 'https://cleverguardtestpage.pages.dev/';
       
       // Open test page in a new tab
       await chrome.tabs.create({
@@ -210,7 +210,7 @@ class CleverGuardPopup {
 
     } catch (error) {
       console.error('Test failed:', error);
-      this.showTestResult(false, 'Test failed. Please check if the extension is properly installed.');
+      this.showTestResult(false, 'Test failed. Please check your internet connection.');
     } finally {
       setTimeout(() => {
         testBtn.textContent = originalText;
@@ -274,12 +274,7 @@ CleverGuard Help & Support
 • Threats Blocked: Number of phishing attempts prevented
 • Links Checked: Total links analyzed for safety
 
-🆘 Need help?
-• Report false positives using the warning screen
-• Contact support: support@cleverguard.security
-• Documentation: docs.cleverguard.security
-
-Version 1.0 | CleverGuard Security
+Version 1.1.1 | CleverGuard Security
     `.trim();
 
     alert(helpContent);

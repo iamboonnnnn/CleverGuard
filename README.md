@@ -56,7 +56,7 @@
 3. A test tab will open with warning demonstration
 
 **Option 2: Comprehensive Test**
-1. Open `test-page.html` in Chrome
+1. Visit the hosted test page: [https://cleverguardtestpage.pages.dev/](https://cleverguardtestpage.pages.dev/)
 2. Click on the "High Risk" test links
 3. Observe the red warning overlays
 
