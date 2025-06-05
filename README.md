@@ -50,20 +50,16 @@
 
 ### ✅ Test Your Protection
 
-**Option 1: Quick Test**
-1. Click the CleverGuard icon
+**Option 1: Extension Test (Recommended)**
+1. Click the CleverGuard icon in your toolbar
 2. Click "Test Protection" button
-3. A test tab will open with warning demonstration
+3. The hosted test page will open: [https://cleverguardtestpage.pages.dev/](https://cleverguardtestpage.pages.dev/)
+4. Click on the "High Risk" test links to see red warning overlays
 
-**Option 2: Comprehensive Test**
-1. Visit the hosted test page: [https://cleverguardtestpage.pages.dev/](https://cleverguardtestpage.pages.dev/)
-2. Click on the "High Risk" test links
-3. Observe the red warning overlays
-
-**Option 3: Real World Test**
-1. Go to Gmail or any email client
-2. Try clicking suspicious-looking links
-3. The extension should intercept and warn you
+**Option 2: Real World Test**
+1. Go to Gmail, iCloud Mail, Outlook, or any supported email client
+2. Try clicking suspicious-looking links in your emails
+3. The extension should intercept and warn you before accessing dangerous sites
 
 ### 🚀 Future Release
 *CleverGuard will be available on the Chrome Web Store soon for easier installation*
@@ -112,12 +108,13 @@ When a threat is detected:
 ## 🎯 Usage Examples
 
 ### Testing the Extension
-1. Click the CleverGuard icon
-2. Click "Test Protection" button
-3. A test tab will open demonstrating the warning system
+1. Click the CleverGuard icon in your toolbar
+2. Click "Test Protection" button  
+3. The hosted test page will open at [https://cleverguardtestpage.pages.dev/](https://cleverguardtestpage.pages.dev/)
+4. Click test links to see warning overlays in action
 
 ### Real-world Protection
-- **Email Links**: Click any link in your email client
+- **Email Links**: Click any link in Gmail, iCloud Mail, Outlook, etc.
 - **Web Browsing**: Navigate normally - protection runs automatically
 - **Social Media**: Click links from posts, messages, and ads
 
