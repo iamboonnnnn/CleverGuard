@@ -16,6 +16,8 @@ All notable changes to the CleverGuard Chrome extension will be documented in th
 - **Better User Experience**: Improved button feedback and error messages
 
 ### 📢 Documentation
+- **Browser Compatibility**: Updated documentation to reflect support for all Chromium-based browsers
+- **Installation Instructions**: Added specific steps for Chrome, Edge, Brave, Opera, and Vivaldi
 - **Transparency Update**: Added clear disclaimer about demonstration/hackathon status
 - **Future Roadmap**: Explained plans for expanded dataset and AI integration
 - **User Expectations**: Set appropriate expectations for current detection capabilities
@@ -87,9 +89,10 @@ All notable changes to the CleverGuard Chrome extension will be documented in th
 
 ### [2.0.0] - Major Update
 - **Enterprise Features**: Admin controls and centralized management
-- **Browser Extension**: Support for Firefox and Edge
-- **Mobile Protection**: Companion mobile app
+- **Firefox Support**: Native Firefox extension (WebExtensions API)
+- **Mobile Protection**: Companion mobile app for iOS and Android
 - **API Integration**: Third-party security service integration
+- **Cloud Infrastructure**: Centralized threat intelligence platform
 
 ---
 

@@ -1,6 +1,6 @@
-# CleverGuard - Advanced Phishing Protection Chrome Extension
+# CleverGuard - Advanced Phishing Protection Browser Extension
 
-🛡️ **CleverGuard** is a powerful Chrome extension that protects users from phishing attacks by detecting suspicious links and displaying warning overlays before users can access potentially dangerous websites.
+🛡️ **CleverGuard** is a powerful browser extension that protects users from phishing attacks by detecting suspicious links and displaying warning overlays before users can access potentially dangerous websites. Compatible with **Chrome and all Chromium-based browsers** including Edge, Brave, Opera, and Vivaldi.
 
 > **🚧 Demo Project:** This is a **hackathon demonstration** showcasing phishing protection concepts. Current detection capabilities are limited to a basic dataset. Future versions will include expanded databases and AI-powered detection.
 
@@ -24,6 +24,14 @@
 - **Statistics Tracking**: Monitor threats blocked and links checked
 - **Accessibility Support**: Full keyboard navigation and screen reader compatibility
 
+### Browser Compatibility
+- **Google Chrome**: Full support with all features
+- **Microsoft Edge**: Complete compatibility with Chromium engine
+- **Brave Browser**: Works seamlessly with privacy features
+- **Opera**: Full functionality including Opera GX
+- **Vivaldi**: Compatible with all customization features
+- **Other Chromium Browsers**: Any browser based on Chromium engine
+
 ## 🔧 Installation & Quick Setup (2 minutes)
 
 ### 📥 Download & Install
@@ -35,9 +43,12 @@
    ```
    *Or download as ZIP and extract to a folder*
 
-2. **Open Chrome Extensions**
-   - Open Google Chrome
-   - Navigate to `chrome://extensions/`
+2. **Open Browser Extensions**
+   - **Chrome:** Navigate to `chrome://extensions/`
+   - **Edge:** Navigate to `edge://extensions/`
+   - **Brave:** Navigate to `brave://extensions/`
+   - **Opera:** Navigate to `opera://extensions/`
+   - **Vivaldi:** Navigate to `vivaldi://extensions/`
    - Enable **Developer mode** (toggle in top-right corner)
 
 3. **Install Extension**
@@ -46,7 +57,7 @@
    - The extension should appear in your extensions list
 
 4. **Verify Installation**
-   - Look for the CleverGuard shield icon 🛡️ in your toolbar
+   - Look for the CleverGuard shield icon 🛡️ in your browser toolbar
    - Click the icon to open settings
    - Ensure "Protection Active" is displayed
 
@@ -71,12 +82,12 @@
 > This extension serves as a **proof of concept** showcasing phishing protection capabilities. For production use, we recommend using it alongside other security tools until our dataset and AI models are fully developed.
 
 ### 🚀 Future Release
-*CleverGuard will be available on the Chrome Web Store soon for easier installation*
+*CleverGuard will be available on browser extension stores (Chrome Web Store, Edge Add-ons, etc.) soon for easier installation*
 
 ## ⚙️ Configuration
 
 ### Settings Panel
-Click the CleverGuard icon in your Chrome toolbar to access:
+Click the CleverGuard icon in your browser toolbar to access:
 
 - **Enable Protection**: Turn phishing detection on/off
 - **Strict Mode**: Check ALL external links (not just suspicious ones)
@@ -211,10 +222,10 @@ Modify `warning.css` to customize:
 ### Quick Fixes
 
 **Extension not loading?**
-- Make sure **Developer mode** is ON in `chrome://extensions/`
+- Make sure **Developer mode** is ON in your browser's extensions page
 - Check that you selected the correct folder with `manifest.json`
 - Refresh the extensions page and try again
-- Ensure Chrome is up to date
+- Ensure your Chromium-based browser is up to date
 
 **No warnings appearing?**
 - Verify protection is **enabled** in the popup settings
@@ -229,7 +240,7 @@ Modify `warning.css` to customize:
 
 **Performance issues?**
 - Disable **Strict Mode** if checking too many links
-- Clear browser cache and restart Chrome
+- Clear browser cache and restart your browser
 - Check for conflicts with other security extensions
 - Monitor extension performance in Task Manager
 
