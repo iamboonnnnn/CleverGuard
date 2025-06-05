@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleverGuard Test Page</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            color: #856404;
+        }
+        
+        .link-category {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+        
+        .link-category h3 {
+            margin-top: 0;
+            color: #555;
+        }
+        
+        .test-link {
+            display: inline-block;
+            margin: 8px 12px 8px 0;
+            padding: 10px 16px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+        
+        .test-link:hover {
+            background: #0056b3;
+        }
+        
+        .dangerous {
+            background: #dc3545;
+        }
+        
+        .dangerous:hover {
+            background: #c82333;
+        }
+        
+        .suspicious {
+            background: #ffc107;
+            color: #333;
+        }
+        
+        .suspicious:hover {
+            background: #e0a800;
+        }
+        
+        .safe {
+            background: #28a745;
+        }
+        
+        .safe:hover {
+            background: #218838;
+        }
+        
+        .instructions {
+            background: #e7f3ff;
+            border: 1px solid #b8daff;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        code {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Consolas', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🛡️ CleverGuard Extension Test Page</h1>
+        
+        <div class="warning">
+            <strong>⚠️ Testing Environment</strong><br>
+            This page is designed to test the CleverGuard extension functionality. 
+            The links below will trigger different types of warnings based on their threat level.
+        </div>
+        
+        <div class="instructions">
+            <strong>📋 How to Test:</strong>
+            <ol>
+                <li>Make sure the CleverGuard extension is installed and enabled</li>
+                <li>Click on the test links below</li>
+                <li>Observe the warning overlays that appear</li>
+                <li>Try different settings in the extension popup</li>
+                <li>Test the feedback and reporting features</li>
+            </ol>
+        </div>
+
+        <div class="link-category">
+            <h3>🔴 High Risk Links (Should trigger RED warnings)</h3>
+            <p>These links contain known phishing patterns and should be blocked immediately:</p>
+            
+            <a href="https://phishing-example.com/login" class="test-link dangerous">
+                Fake Banking Site
+            </a>
+            
+            <a href="https://fake-bank.net/secure-login" class="test-link dangerous">
+                Suspicious Bank Login
+            </a>
+            
+            <a href="https://malware-domain.com/download" class="test-link dangerous">
+                Malware Download
+            </a>
+            
+            <a href="https://scam-website.info/verify" class="test-link dangerous">
+                Account Verification Scam
+            </a>
+        </div>
+
+        <div class="link-category">
+            <h3>🟡 Medium Risk Links (Should trigger ORANGE warnings)</h3>
+            <p>These links use suspicious patterns or URL shorteners:</p>
+            
+            <a href="https://paypal.tk/login" class="test-link suspicious">
+                Fake PayPal (.tk domain)
+            </a>
+            
+            <a href="https://amazon.ml/account" class="test-link suspicious">
+                Fake Amazon (.ml domain)
+            </a>
+            
+            <a href="https://bit.ly/suspicious-link" class="test-link suspicious">
+                Shortened URL (bit.ly)
+            </a>
+            
+            <a href="https://microsoft.ga/office" class="test-link suspicious">
+                Fake Microsoft (.ga domain)
+            </a>
+        </div>
+
+        <div class="link-category">
+            <h3>🟢 Safe Links (Should allow navigation)</h3>
+            <p>These are legitimate websites that should not trigger warnings:</p>
+            
+            <a href="https://www.google.com" class="test-link safe">
+                Google Search
+            </a>
+            
+            <a href="https://www.github.com" class="test-link safe">
+                GitHub
+            </a>
+            
+            <a href="https://www.stackoverflow.com" class="test-link safe">
+                Stack Overflow
+            </a>
+            
+            <a href="https://www.mozilla.org" class="test-link safe">
+                Mozilla Foundation
+            </a>
+        </div>
+
+        <div class="link-category">
+            <h3>🔗 Internal Links (Should be ignored)</h3>
+            <p>These internal links should not trigger any security checks:</p>
+            
+            <a href="#section1" class="test-link">
+                Internal Anchor Link
+            </a>
+            
+            <a href="javascript:alert('Internal JS')" class="test-link">
+                JavaScript Link
+            </a>
+            
+            <a href="/relative/path" class="test-link">
+                Relative Path Link
+            </a>
+        </div>
+
+        <div class="instructions">
+            <strong>🧪 Testing Scenarios:</strong>
+            <ul>
+                <li><strong>Normal Mode:</strong> Only suspicious links should trigger warnings</li>
+                <li><strong>Strict Mode:</strong> ALL external links should be checked</li>
+                <li><strong>Protection Disabled:</strong> No warnings should appear</li>
+                <li><strong>Different Email Platforms:</strong> Test in Gmail, Outlook, etc.</li>
+            </ul>
+        </div>
+
+        <div class="instructions">
+            <strong>🎯 Expected Behavior:</strong>
+            <ul>
+                <li>High-risk links should show <strong>RED overlay</strong> with "HIGH" threat level</li>
+                <li>Medium-risk links should show <strong>ORANGE overlay</strong> with "MEDIUM" threat level</li>
+                <li>Safe links should navigate normally without warnings</li>
+                <li>Warning overlays should be full-screen and block page interaction</li>
+                <li>Users should be able to go back or report false positives</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 40px; text-align: center; color: #666;">
+            <p>🛡️ Protected by CleverGuard Extension</p>
+            <p><small>This test page helps verify that your phishing protection is working correctly.</small></p>
+        </div>
+
+        <!-- Hidden sections for anchor testing -->
+        <div id="section1" style="margin-top: 100px; padding: 20px; background: #e9ecef; border-radius: 8px;">
+            <h4>📍 Section 1 - Internal Link Test</h4>
+            <p>This section demonstrates that internal anchor links work normally and don't trigger security warnings.</p>
+        </div>
+    </div>
+
+    <script>
+        // Add some JavaScript to demonstrate that the extension doesn't interfere with normal page functionality
+        console.log('Test page loaded successfully');
+        
+        // Add click logging for demonstration
+        document.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                console.log('Link clicked:', e.target.href);
+            }
+        });
+    </script>
+</body>
+</html> 

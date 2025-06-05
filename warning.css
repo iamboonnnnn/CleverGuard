@@ -1,0 +1,366 @@
+/* CleverGuard Phishing Warning Styles */
+
+/* Warning Overlay */
+.cleverguard-warning-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: rgba(220, 20, 20, 0.95) !important;
+  z-index: 2147483647 !important; /* Maximum z-index */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif !important;
+  backdrop-filter: blur(5px) !important;
+  animation: cleverguard-fade-in 0.3s ease-out !important;
+}
+
+@keyframes cleverguard-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Warning Content Container */
+.cleverguard-warning-content {
+  background: white !important;
+  border-radius: 16px !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+  max-width: 600px !important;
+  width: 90% !important;
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+  padding: 40px !important;
+  text-align: center !important;
+  border: 3px solid #dc1414 !important;
+  position: relative !important;
+}
+
+/* Warning Header */
+.cleverguard-warning-header {
+  margin-bottom: 30px !important;
+}
+
+.cleverguard-warning-icon {
+  font-size: 64px !important;
+  margin-bottom: 20px !important;
+  animation: cleverguard-pulse 2s infinite !important;
+}
+
+@keyframes cleverguard-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.cleverguard-warning-title {
+  font-size: 32px !important;
+  font-weight: 900 !important;
+  color: #dc1414 !important;
+  margin: 0 !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1) !important;
+  line-height: 1.2 !important;
+}
+
+/* Warning Body */
+.cleverguard-warning-body {
+  margin-bottom: 30px !important;
+  text-align: left !important;
+}
+
+.cleverguard-threat-level {
+  display: inline-block !important;
+  padding: 12px 20px !important;
+  border-radius: 25px !important;
+  font-weight: bold !important;
+  font-size: 16px !important;
+  margin-bottom: 20px !important;
+  text-align: center !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.cleverguard-threat-level.high {
+  background: linear-gradient(135deg, #ff4444, #cc0000) !important;
+  color: white !important;
+  border: 2px solid #aa0000 !important;
+}
+
+.cleverguard-threat-level.medium {
+  background: linear-gradient(135deg, #ff8c00, #e67300) !important;
+  color: white !important;
+  border: 2px solid #cc6600 !important;
+}
+
+.cleverguard-threat-level.low {
+  background: linear-gradient(135deg, #ffc107, #e6ae06) !important;
+  color: #333 !important;
+  border: 2px solid #cc9a06 !important;
+}
+
+.cleverguard-warning-details {
+  background: #f8f9fa !important;
+  border: 1px solid #dee2e6 !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 20px 0 !important;
+}
+
+.cleverguard-warning-details p {
+  margin: 10px 0 !important;
+  font-size: 16px !important;
+  color: #333 !important;
+  line-height: 1.5 !important;
+}
+
+.cleverguard-warning-details strong {
+  color: #dc1414 !important;
+  font-weight: 600 !important;
+}
+
+.cleverguard-warning-details code {
+  background: #e9ecef !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  font-family: 'Monaco', 'Consolas', monospace !important;
+  font-size: 14px !important;
+  word-break: break-all !important;
+  border: 1px solid #ced4da !important;
+}
+
+.cleverguard-warning-advice {
+  background: #fff3cd !important;
+  border: 1px solid #ffeaa7 !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 20px 0 !important;
+}
+
+.cleverguard-warning-advice h3 {
+  margin: 0 0 15px 0 !important;
+  color: #856404 !important;
+  font-size: 18px !important;
+}
+
+.cleverguard-warning-advice ul {
+  margin: 0 !important;
+  padding-left: 20px !important;
+  text-align: left !important;
+}
+
+.cleverguard-warning-advice li {
+  margin: 8px 0 !important;
+  color: #856404 !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+}
+
+/* Warning Actions */
+.cleverguard-warning-actions {
+  display: flex !important;
+  gap: 15px !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 20px !important;
+}
+
+.cleverguard-btn {
+  padding: 15px 30px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  min-width: 140px !important;
+  justify-content: center !important;
+}
+
+.cleverguard-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+.cleverguard-btn:active {
+  transform: translateY(0) !important;
+}
+
+.cleverguard-btn-safe {
+  background: linear-gradient(135deg, #28a745, #20c997) !important;
+  color: white !important;
+  border: 2px solid #1e7e34 !important;
+}
+
+.cleverguard-btn-safe:hover {
+  background: linear-gradient(135deg, #218838, #1e7e34) !important;
+}
+
+.cleverguard-btn-danger {
+  background: linear-gradient(135deg, #dc3545, #c82333) !important;
+  color: white !important;
+  border: 2px solid #bd2130 !important;
+}
+
+.cleverguard-btn-danger:hover {
+  background: linear-gradient(135deg, #c82333, #bd2130) !important;
+}
+
+.cleverguard-btn-secondary {
+  background: linear-gradient(135deg, #6c757d, #5a6268) !important;
+  color: white !important;
+  border: 2px solid #495057 !important;
+}
+
+.cleverguard-btn-secondary:hover {
+  background: linear-gradient(135deg, #5a6268, #495057) !important;
+}
+
+/* Warning Footer */
+.cleverguard-warning-footer {
+  border-top: 1px solid #dee2e6 !important;
+  padding-top: 20px !important;
+  margin-top: 20px !important;
+  color: #6c757d !important;
+}
+
+.cleverguard-warning-footer p {
+  margin: 5px 0 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+.cleverguard-warning-footer small {
+  font-size: 12px !important;
+  color: #868e96 !important;
+}
+
+/* Loading Indicator */
+.cleverguard-loading-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  z-index: 2147483646 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif !important;
+}
+
+.cleverguard-loading-content {
+  background: white !important;
+  border-radius: 12px !important;
+  padding: 30px !important;
+  text-align: center !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+.cleverguard-spinner {
+  width: 40px !important;
+  height: 40px !important;
+  border: 4px solid #f3f3f3 !important;
+  border-top: 4px solid #007bff !important;
+  border-radius: 50% !important;
+  animation: cleverguard-spin 1s linear infinite !important;
+  margin: 0 auto 15px auto !important;
+}
+
+@keyframes cleverguard-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.cleverguard-loading-content p {
+  margin: 0 !important;
+  color: #333 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cleverguard-warning-content {
+    padding: 30px 20px !important;
+    margin: 10px !important;
+    width: calc(100% - 20px) !important;
+  }
+  
+  .cleverguard-warning-title {
+    font-size: 24px !important;
+  }
+  
+  .cleverguard-warning-icon {
+    font-size: 48px !important;
+  }
+  
+  .cleverguard-warning-actions {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
+  .cleverguard-btn {
+    width: 100% !important;
+    max-width: 300px !important;
+  }
+}
+
+/* Accessibility */
+.cleverguard-btn:focus {
+  outline: 3px solid #007bff !important;
+  outline-offset: 2px !important;
+}
+
+.cleverguard-warning-overlay * {
+  box-sizing: border-box !important;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .cleverguard-warning-overlay {
+    background-color: rgb(150, 0, 0) !important;
+  }
+  
+  .cleverguard-warning-content {
+    border: 4px solid #000 !important;
+  }
+  
+  .cleverguard-warning-title {
+    color: #000 !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .cleverguard-warning-overlay {
+    animation: none !important;
+  }
+  
+  .cleverguard-warning-icon {
+    animation: none !important;
+  }
+  
+  .cleverguard-btn {
+    transition: none !important;
+  }
+  
+  .cleverguard-spinner {
+    animation: none !important;
+    border-top-color: transparent !important;
+  }
+} 
