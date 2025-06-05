@@ -469,4 +469,4 @@ if (document.readyState === 'loading') {
   new CleverGuardProtection();
 }
 
-console.log('CleverGuard content script loaded'); 
+console.log('CleverGuard content script loaded - v1.1 with enhanced protection'); 

@@ -10,7 +10,8 @@ class CleverGuardPopup {
     };
     this.stats = {
       threatsBlocked: 0,
-      linksChecked: 0
+      linksChecked: 0,
+      lastThreatBlocked: null
     };
     this.init();
   }

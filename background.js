@@ -1,13 +1,18 @@
 // CleverGuard Background Service Worker
 // Handles phishing URL detection and analysis
 
-// Known phishing domains (example list - would be updated regularly)
+// Known phishing domains (updated list - v1.1)
 const KNOWN_PHISHING_DOMAINS = [
   'phishing-example.com',
   'fake-bank.net',
   'suspicious-site.org',
   'malware-domain.com',
-  'scam-website.info'
+  'scam-website.info',
+  'secure-banking.tk',
+  'paypal-verify.ml',
+  'amazon-security.ga',
+  'microsoft-login.cf',
+  'apple-support.tk'
 ];
 
 // Suspicious patterns in URLs
